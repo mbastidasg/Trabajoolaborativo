@@ -118,3 +118,114 @@ public static void main(String[] args) {
         
     }
 }
+
+
+
+
+
+
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ejerciciosq;
+import java.util.*;
+/**
+ *
+ * @author Maicol Velasquez
+ */
+public class EjerciciosQ {
+    Scanner cv = new Scanner(System.in);   
+
+    /**
+     * @param args the command line arguments
+     */
+    
+    
+    
+    public EjerciciosQ(){
+        float col =0;
+    int [][] matriz = {{2,5,5},{3,5,6},{4,4,1},{3,2,1}};
+    int vectorF[] = new int [4];
+    int vectorC[] = new int [4];
+        System.out.println("desea ver filas 1 \n desea ver columnas 2\n:");
+        int fd = cv.nextInt();
+        switch (fd ){
+            case 1:   
+                for (int i = 0; i<4; i++){
+      int aux = sum (matriz, i);
+     vectorF[i] = aux;
+             System.out.println("vector filas:" + vectorF[i]);
+             
+    }
+                break;
+            case 2:
+                for (int i = 0; i<3; i++){
+                    
+       int aux1 = sumC (matriz, i);
+     vectorC[i] = aux1;
+             System.out.println("vector columnas:" + vectorC[i]);
+             
+                }
+                break;
+         
+               
+    }
+    
+        
+    
+}
+    
+    
+    
+    
+    
+  public int sum(int[][] matriz, int fila) {
+ 
+  int sumac = 0;
+ 
+for(int i=0; i <3 ; i++){ 
+
+    int aux = matriz[fila][i];
+
+sumac += aux;
+} 
+
+ 
+   
+  return sumac;
+ }
+    
+ public int sumC(int[][] matriz, int col) {
+ 
+  int sumac = 0;
+ 
+for(int i=0; i <4 ; i++){ 
+
+    int aux = matriz[i][col];
+
+sumac += aux;
+} 
+
+    
+   
+  return sumac;
+ }
+    
+    public  static void main(String[] args) {
+        // TODO code application logic here
+        
+     EjerciciosQ hola = new EjerciciosQ();
+    
+        
+ 
+}
+    
+   
+    
+    }
+    
+
